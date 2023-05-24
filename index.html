@@ -9,7 +9,7 @@
 
          var options = {
   enableExtendedJourneysAssist: true, // enable or disable referring Branch link expiry for Journeys Assist
-  extendedJourneysAssistExpiryTime : 5000 // TTL value in milliseconds for the referring Branch link. Defaults to 7 days
+  extendedJourneysAssistExpiryTime : 50000 // TTL value in milliseconds for the referring Branch link. Defaults to 7 days
 };
 branch.init('key_live_obZ8HYNNZgHB6qw5a66zVmdbssjl7wc4', options, function(err, data) {
   console.log(err, data);
