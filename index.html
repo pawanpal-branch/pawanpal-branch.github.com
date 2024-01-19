@@ -8,12 +8,33 @@
          (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
 
          var options = {
-  enableExtendedJourneysAssist: true, // enable or disable referring Branch link expiry for Journeys Assist
-  extendedJourneysAssistExpiryTime : 500000 // TTL value in milliseconds for the referring Branch link. Defaults to 7 days
+            enableExtendedJourneysAssist: true, // enable or disable referring Branch link expiry for Journeys Assist
+            extendedJourneysAssistExpiryTime : 500000 // TTL value in milliseconds for the referring Branch link. Defaults to 7 days
+
+
+
+
+
 };
-branch.init('key_live_bj83Q6QO9pTz2Fx5dYYrNndprBea9sn3', options, function(err, data) {
-  console.log(err, data);
-});
+        branch.init('key_live_leYFHYjfMzD7mIGtAVDxyhjgEtjn2StW', options, function(err, data) {
+          console.log(err, data);
+        });
+
+        var custom_data = {
+         "Custom_Event_Property_Key1": "Custom_Event_Property_val1",
+         "Custom_Event_Property_Key2": "Custom_Event_Property_val2"
+        };
+
+        var customer_event_alias = "my custom alias";
+
+        branch.logEvent(
+            "custom_event_1",
+            custom_data,
+            customer_event_alias,
+            function(err) { console.log(err); }
+        );
+
+
 
          // init Branch
          //branch.init('key_live_obZ8HYNNZgHB6qw5a66zVmdbssjl7wc4');
@@ -41,6 +62,8 @@ a:hover, a:active {
      <button onclick="window.location.href = 'index1.html';">Page 1</button>
 
      <button onclick="window.location.href = 'index2.html';">Page 2</button>
+
+     <button onclick="window.location.href = 'https://on.hellostake.com/veEAp8BVkEb';">Redirection check</button>
 
 </body>
 </html>
