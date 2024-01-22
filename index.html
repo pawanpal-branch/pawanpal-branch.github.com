@@ -35,6 +35,22 @@
         );
 
 
+        var event_and_custom_data = {
+           "transaction_id": "tras_Id_1234",
+           "description": "Preferred purchase",
+           "registration_id": "12345"
+        };
+
+        var customer_event_alias = "alias2";
+
+        branch.logEvent(
+           "COMPLETE_REGISTRATION",
+           event_and_custom_data,
+           content_items,
+           customer_event_alias,
+           function(err) { console.log(err); }
+        );
+
 
          // init Branch
          //branch.init('key_live_obZ8HYNNZgHB6qw5a66zVmdbssjl7wc4');
