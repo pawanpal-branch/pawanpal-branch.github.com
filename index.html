@@ -11,10 +11,6 @@
             enableExtendedJourneysAssist: true, // enable or disable referring Branch link expiry for Journeys Assist
             extendedJourneysAssistExpiryTime : 500000 // TTL value in milliseconds for the referring Branch link. Defaults to 7 days
 
-
-
-
-
 };
         branch.init('key_live_bj83Q6QO9pTz2Fx5dYYrNndprBea9sn3', options, function(err, data) {
           console.log(err, data);
@@ -26,34 +22,15 @@
         };
 
         var customer_event_alias = "my custom alias";
+        var content_items = [];
 
         branch.logEvent(
             "custom_event_1",
             custom_data,
+            content_items,
             customer_event_alias,
             function(err) { console.log(err); }
         );
-
-
-        var event_and_custom_data = {
-           "transaction_id": "tras_Id_1234",
-           "description": "Preferred purchase",
-           "registration_id": "12345"
-        };
-
-        var customer_event_alias = "alias2";
-
-        branch.logEvent(
-           "COMPLETE_REGISTRATION",
-           event_and_custom_data,
-           content_items,
-           customer_event_alias,
-           function(err) { console.log(err); }
-        );
-
-
-         // init Branch
-         //branch.init('key_live_obZ8HYNNZgHB6qw5a66zVmdbssjl7wc4');
       </script>
 
       <style>
