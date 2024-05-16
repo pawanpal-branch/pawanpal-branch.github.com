@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="deepview-service" content="deepview-service" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        word-wrap: break-word;
+		}
+
+      .main-image {
+        width: 100px;
+        height: 100px;
+        background-image: url(https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Emblem.png);
+        background-size: cover;
+        background-position: top center;
+        margin: 96px auto 36px auto;
+        border-radius: 16px;
+        -webkit-box-shadow: 3px 4px 12px rgba(127, 127, 142, 0.4);
+        -moz-box-shadow: 3px 4px 12px rgba(127, 127, 142, 0.4);
+        box-shadow: 3px 4px 12px rgb(127 127 142 / 40%);
+        position: relative;
+        z-index: 2;
+      }
+
+      #content-container {
+        box-sizing:
+        border-box;
+        margin: 0 22px 0 22px;
+        text-align: center;
+      }
+      .app-title {
+      	text-transform: uppercase;
+      	font-size: 16px;
+      	font-weight:600;
+      	font-family: "Source Sans Pro", Helvetica, serif;
+      	line-height: 16px;
+      	margin-bottom: 8px;
+      	color: #AFB4C2;
+      	letter-spacing: 0.4px;
+      }
+      .card-title {
+      	font-size: 24px;
+      	font-weight: 600;
+      	font-family: "Source Sans Pro", Helvetica, serif;
+      	line-height: 24px;
+      	margin-bottom: 8px;
+      	color: #222234;
+      }
+      .app-content {
+      	font-size: 14px;
+      	font-weight: 800;
+      	font-family: "Source Sans Pro", Helvetica, serif;
+      	line-height: 16px;
+      	margin-bottom: 8px;
+      	color: #222235;
+      }
+      .input-wrapper {
+      	position: absolute;
+      	bottom: 15px;
+
+      	width:100%;
+      	-webkit-box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+      	-moz-box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+      	box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+      }
+
+      .input-container {
+      	width:100%;
+      	padding:0 24px;
+      	text-align:center;
+      	-webkit-box-sizing: border-box;
+      	-moz-box-sizing: border-box;
+      	box-sizing: border-box;
+      }
+
+      .form-get-the-app {
+      	text-align: center;
+      }
+
+      .cta-button {
+        font-family: "Lato", Helvetica, serif;
+        display: block;
+        padding: 5px 0;
+        line-height: 40px;
+        background-color: #222234;
+        border-radius: 16px;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 900;
+        -webkit-box-shadow:3px 4px 12px rgba(35, 58, 79, 0.4);
+        -moz-box-shadow:3px 4px 12px rgba(35, 58, 79, 0.4);
+        box-shadow:3px 4px 12px
+        rgba(35, 58, 79, 40%);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="card center">
+      <div class="main-image"></div>
+      <div id="content-container">
+        <div class="card-title">Flipkart</div>
+        <div class="app-content">A world of limitless possibilities awaits you!</div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container">
+          <form class="form-get-the-app">
+            <a href="https://www.flipkart.com/mobiles/mi~brand/pr?sid=tyy%2C4io&otracker=nmenu_sub_Electronics_0_Mi&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXr8ovKdJLLCjQy8nMy9Y3t8jxzy2IzHP0SrJXNTIxLrBNjDfWMzSJT8lMzyxJzFFTNXdNzslMzo7PTLFVNXeCsVXNXcBS%2BcUlYOHS4pL83Pi0zNScFEMkufjk0qKi1LzkStvQYIRgbn5Kao6tc4AnAMS8YliUAAAA&%243p=a_3.14_digital&~click_id=%7Bclick_id%7D&~cost=%7Bcustom_field1%7D&~cost_currency=USD&~cost_model=CPI&_branch_match_id=1300772219093829656" class="cta-button">Continue in app</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript">
+function validateProtocol(url){
+   var parser = document.createElement("a");
+   parser.href = url;
+   var protocol = parser.protocol.toLowerCase();
+   if ([ "javascript:", "vbscript:", "data:", "ftp:", ":", " "].indexOf(protocol) < 0) {
+      return url;}
+   return null;
+}
+
+    function isSafariBrowser(ua) {
+      return !!/^((?!chrome|android|crios|fxios).)*safari/i.test(ua);
+    }
+
+    function isGreaterThanVersion(ua, v) {
+      var match = /iPhone OS ([^ ]*)/i.exec(ua);
+      if (match && match[1]) {
+        try {
+          var version = match[1].replace(/_/gi, '.');
+          version = version.split('.');
+          version = parseFloat(version[0] + '.' + version[1]);
+          if (version >= v) {
+            return true;
+          }
+        } catch (e) {
+          return false;
+        }
+      }
+      return false;
+    }
+
+    function isSafari12Dot3OrGreater() {
+      var ua = navigator.userAgent;
+      var isSafari = isSafariBrowser(ua);
+
+      if (isSafari) {
+        return isGreaterThanVersion(ua, 12.3);
+      }
+
+      return false;
+    };
+          // Initially set isBlurred to false. If a CTA view comes up, then window.onblur() is going
+          // to be called and isBlurred will be set to true
+          let isBlurred = false;
+          let fallbackHappened = false;
+
+          function fallback() {
+              if (document.webkitHidden || document.hidden || document.msHidden) {
+                  // The browser window is hidden. This means that the uri scheme properly opened.
+                  // No need to fallback
+                  return;
+              }
+
+              // The deepview is still visible. If it is blurred, this means that the uri scheme is in the
+              // process of opening, or that the CTA view is still up. Do not fallback yet.
+              // If the fallback already happened, then don't fallback again. This way we dont publish
+              // a bunch of duplicate clicks due to our setInterval function below.
+              const location = window.top.location.href;
+              if (isBlurred || fallbackHappened || location === "flipkart://open?_branch_referrer=H4sIAAAAAAAAA8soKSkottLXr8ovKdJLLCjQy8nMy9Y3t8jxzy2IzHP0SrJXNTIxLrBNjDfWMzSJT8lMzyxJzFFTNXdNzslMzo7PTLFVNXeCsVXNXcBS%2BcUlYOHS4pL83Pi0zNScFEMkufjk0qKi1LzkStvQYIRgbn5Kao6tc4AnAMS8YliUAAAA&link_click_id=1300772219093829656") {
+                  return;
+              }
+
+              fallbackHappened = true;
+
+              if (isSafari12Dot3OrGreater()) {
+                  if (window.confirm("Open in App Store?")) {
+                      window.top.location = validateProtocol("https://www.flipkart.com/mobiles/mi~brand/pr?sid=tyy%2C4io&otracker=nmenu_sub_Electronics_0_Mi&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXr8ovKdJLLCjQy8nMy9Y3t8jxzy2IzHP0SrJXNTIxLrBNjDfWMzSJT8lMzyxJzFFTNXdNzslMzo7PTLFVNXeCsVXNXcBS%2BcUlYOHS4pL83Pi0zNScFEMkufjk0qKi1LzkStvQYIRgbn5Kao6tc4AnAMS8YliUAAAA&%243p=a_3.14_digital&~click_id=%7Bclick_id%7D&~cost=%7Bcustom_field1%7D&~cost_currency=USD&~cost_model=CPI&_branch_match_id=1300772219093829656");
+                  }
+              } else {
+                  window.top.location = validateProtocol("https://www.flipkart.com/mobiles/mi~brand/pr?sid=tyy%2C4io&otracker=nmenu_sub_Electronics_0_Mi&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXr8ovKdJLLCjQy8nMy9Y3t8jxzy2IzHP0SrJXNTIxLrBNjDfWMzSJT8lMzyxJzFFTNXdNzslMzo7PTLFVNXeCsVXNXcBS%2BcUlYOHS4pL83Pi0zNScFEMkufjk0qKi1LzkStvQYIRgbn5Kao6tc4AnAMS8YliUAAAA&%243p=a_3.14_digital&~click_id=%7Bclick_id%7D&~cost=%7Bcustom_field1%7D&~cost_currency=USD&~cost_model=CPI&_branch_match_id=1300772219093829656");
+              }
+          }
+          window.onblur = function() {
+              isBlurred = true;
+          };
+
+          window.onfocus = function() {
+              isBlurred = false;
+              // if we end up focusing on the deepview again, this means that we should fallback
+              // because it means that the uri scheme did not open
+              fallback();
+          };
+
+          window.onload = function() {
+              window.top.location = validateProtocol("flipkart://open?_branch_referrer=H4sIAAAAAAAAA8soKSkottLXr8ovKdJLLCjQy8nMy9Y3t8jxzy2IzHP0SrJXNTIxLrBNjDfWMzSJT8lMzyxJzFFTNXdNzslMzo7PTLFVNXeCsVXNXcBS%2BcUlYOHS4pL83Pi0zNScFEMkufjk0qKi1LzkStvQYIRgbn5Kao6tc4AnAMS8YliUAAAA&link_click_id=1300772219093829656");
+              setTimeout(function() {
+                  fallback();
+              }, 3000);
+          }</script></body>
+</html>
