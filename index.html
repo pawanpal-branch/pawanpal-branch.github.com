@@ -16,21 +16,38 @@
           console.log(err, data);
         });
 
+        branch.setBranchViewData({data: {'name': 'pawan',}});
+
         var custom_data = {
          "Custom_Event_Property_Key1": "Custom_Event_Property_val1",
          "Custom_Event_Property_Key2": "Custom_Event_Property_val2"
         };
 
         var customer_event_alias = "my custom alias";
-        var content_items = [];
 
         branch.logEvent(
             "custom_event_1",
             custom_data,
-            content_items,
             customer_event_alias,
             function(err) { console.log(err); }
         );
+
+        var purchase_wl_custom_data = {
+            "Event Name": "PURCHASE-WL",
+            "LOB": "WL",
+            "custom event Alias": {
+              "userType": "GUEST",
+              "lob": "WHATSAPPE2E_MOBWEB",
+              "language": "en",
+            }
+          };
+        branch.logEvent(
+            'PURCHASE-WL',
+            purchase_wl_custom_data,
+            function (err) { console.log("from PURCHASE-WL ", err); }
+          );
+
+
       </script>
 
       <style>
