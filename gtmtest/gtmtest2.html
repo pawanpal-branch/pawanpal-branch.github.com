@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>GTM Test 2</title>
+
+      <!-- Console capture: mirrors console.log output onto the page -->
+      <script>
+      (function(){
+        var originalLog = console.log;
+        var pending = [];
+        console.log = function() {
+          originalLog.apply(console, arguments);
+          var line = Array.prototype.slice.call(arguments).map(function(a){
+            return (typeof a === 'object') ? JSON.stringify(a) : String(a);
+          }).join(' ');
+          var el = document.getElementById('console-log');
+          if (el) {
+            el.textContent += line + '\n';
+          } else {
+            pending.push(line);
+          }
+        };
+        window.addEventListener('DOMContentLoaded', function(){
+          var el = document.getElementById('console-log');
+          if (el && pending.length) {
+            el.textContent += pending.join('\n') + '\n';
+            pending = [];
+          }
+        });
+      })();
+      </script>
+
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WNL4N99V');</script>
+      <!-- End Google Tag Manager -->
+
+      <style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover, button:active {
+  background-color: red;
+}
+
+#console-log {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #111;
+  color: #0f0;
+  font-family: monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  min-height: 100px;
+  border-radius: 4px;
+}
+</style>
+   </head>
+   <body>
+     <!-- Google Tag Manager (noscript) -->
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNL4N99V"
+     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+     <!-- End Google Tag Manager (noscript) -->
+
+     <p>GTM Test 2</p>
+     <button onclick="window.location.href = '../index.html';">Home Page</button>
+     <button onclick="window.location.href = 'gtmtest1.html';">GTM Test 1</button>
+     <button onclick="window.location.href = 'gtmtest3.html';">GTM Test 3</button>
+
+     <pre id="console-log"></pre>
+
+     <script>
+       console.log('gtmtest2.html loaded');
+       console.log('dataLayer', window.dataLayer);
+     </script>
+
+</body>
+</html>
