@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <script>
+         // load Branch
+         (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
+
+//          var options = {
+//             enableExtendedJourneysAssist: true, // enable or disable referring Branch link expiry for Journeys Assist
+//             extendedJourneysAssistExpiryTime : 500000 // TTL value in milliseconds for the referring Branch link. Defaults to 7 days
+//
+// };
+        branch.init('key_live_bj83Q6QO9pTz2Fx5dYYrNndprBea9sn3', function(err, data) {
+          console.log(err, data);
+        });
+
+        branch.setBranchViewData({data: {'name': 'pawan',}});
+
+        var custom_data = {
+         "Custom_Event_Property_Key1": "Custom_Event_Property_val1",
+         "Custom_Event_Property_Key2": "Custom_Event_Property_val2"
+        };
+
+        var customer_event_alias = "my custom alias";
+
+        branch.logEvent(
+            "custom_event_1",
+            custom_data,
+            customer_event_alias,
+            function(err) { console.log(err); }
+        );
+
+        var purchase_wl_custom_data = {
+            "Event Name": "PURCHASE-WL",
+            "LOB": "WL",
+            "custom event Alias": {
+              "userType": "GUEST",
+              "lob": "WHATSAPPE2E_MOBWEB",
+              "language": "en",
+            }
+          };
+        branch.logEvent(
+            'PURCHASE-WL',
+            purchase_wl_custom_data,
+            function (err) { console.log("from PURCHASE-WL ", err); }
+          );
+
+
+      </script>
+
+      <style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+   </head>
+   <body>
+
+
+     <!-- <input type="button" value="Cleartrip" onclick="window.location.href='https://cleartrip.app.link/4d749a31-a2a7-4f45-a278-f1a3584a6ae7_1708521469052';">
+
+     <input type="button" value="Insta testing" onclick="window.location.href='intent://fk.dl/de_wv_CL%7Csem_--_https://www.flipkart.com/grocery-supermart-store~q~marketplace=GROCERY_--_cmpid_--_content_appretar_fb_Grocery_DPA?_branch_referrer=H4sIAAAAAAAAA8soKSkottLXr8ovKdJLLCjQy8nMy9YvyPUxdPQ3r3T1TAIA4rxKOSEAAAA%3D&link_click_id=1300772219093829656#Intent;scheme=flipkart;package=com.flipkart.android;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.flipkart.android&referrer=link_click_id%253D1300772219093829656;S.market_referrer=link_click_id%3D1300772219093829656;B.branch_intent=true;end';">
+
+     <button onclick="window.location.href = 'https://3fvkf-hpark.branchbeta.link/Ab46W1sivFb?%24uri_redirect_mode=2';">BMF</button>
+
+     <button onclick="window.location.href = 'index1.html';">Page 1</button>
+
+     <button onclick="window.location.href = 'index2.html';">Page 2</button>
+
+     <button onclick="window.location.href = 'https://on.hellostake.com/veEAp8BVkEb';">Redirection check</button>
+
+     <button onclick="window.location.href = 'market://details?id=com.miniclip.eightballpool';">Market link</button> -->
+
+
+
+
+
+</body>
+</html>
